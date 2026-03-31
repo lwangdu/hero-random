@@ -4,6 +4,13 @@ Hero Random Images is a WordPress plugin that adds a Gutenberg hero block powere
 
 The block selects one random image from the gallery and overlays editable heading, text, and button content using InnerBlocks.
 
+## Status
+
+- Current version: `1.2.5`
+- Distribution: GitHub
+- Dependency: Advanced Custom Fields Pro
+- PHP linting: passed on `hero-random.php` and `inc/hero-random-block.php`
+
 ## Features
 
 - Displays a random hero image from an ACF gallery field
@@ -27,6 +34,18 @@ The block selects one random image from the gallery and overlays editable headin
 5. The plugin currently checks `hero_random` first and then `gallery`.
 6. Add the `Hero (Random ACF Image)` block in the editor.
 
+## Development
+
+- Main plugin file: `hero-random.php`
+- Render template: `inc/hero-random-block.php`
+- Stylesheet: `inc/hero-random.css`
+- Local lint command:
+
+```bash
+/opt/homebrew/bin/php -l hero-random.php
+/opt/homebrew/bin/php -l inc/hero-random-block.php
+```
+
 ## Files
 
 - `hero-random.php` plugin bootstrap and block registration
@@ -38,6 +57,16 @@ The block selects one random image from the gallery and overlays editable headin
 
 - This plugin is distributed through GitHub and is not currently intended for the WordPress.org plugin directory.
 - The block depends on ACF block registration and ACF gallery field data.
+
+## Changelog
+
+### 1.2.5
+
+- Improved accessibility for hero labeling and image handling
+- Simplified stylesheet loading so editor and front end stay aligned
+- Added safer gallery image resolution and attachment validation
+- Added dependency notice and release metadata
+- Added GitHub project documentation
 
 ## License
 
