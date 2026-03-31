@@ -1,0 +1,116 @@
+.hero-random-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate; /* ensure overlay blends properly */
+  --hero-pad: clamp(1rem, 3vw, 3rem);
+  --hero-max: 72rem;
+  --hero-text: #fff;
+  --hero-shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.35);
+}
+
+/* Keep an aspect ratio if your images vary wildly (optional) */
+.hero-random-wrapper .hero-media {
+  margin: 0;
+  block-size: auto;
+  inline-size: 100%;
+  aspect-ratio: 16/9; /* remove if you always provide same-ish ratios with width/height */
+}
+
+.hero-random-wrapper .hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay (centered) */
+.hero-random-wrapper .hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--hero-pad);
+  text-align: center;
+  z-index: 1;
+  pointer-events: none; /* let inner controls opt-in */
+  background-image: linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,.25) 30%, rgba(0,0,0,.1) 60%, rgba(0,0,0,0));
+}
+
+.hero-random-wrapper .hero-content {
+  max-width: 650px;;
+  color: var(--hero-text);
+  pointer-events: auto; /* re-enable interaction */
+}
+
+/* Typography – responsive with clamp() */
+.hero-random-wrapper .hero-content h1,
+.hero-random-wrapper .hero-content h2 {
+  font-size: clamp(1.75rem, 3.5vw + .5rem, 3rem);
+  line-height: 1.1;
+  margin: 0 0 .75rem;
+}
+
+.hero-random-wrapper .hero-content p {
+  font-size: clamp(1rem, 1vw + .75rem, 1.25rem);
+  margin: 0 0 1rem;
+}
+
+/* Subheading (between title and buttons) */
+.hero-random-wrapper .hero-subheading {
+  font-size: clamp(1.05rem, 1.2vw + .6rem, 1.4rem);
+  margin: 0 0 1.25rem;
+  opacity: 0.95;
+  color: var(--hero-text);
+}
+.hero-random-wrapper .hero-subheading {
+  font-weight: 600;
+}
+
+/* Mobile first */
+.hero-random-wrapper .hero-content {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  padding: 12px; /* smaller on mobile */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero-random-wrapper .hero-content {
+    padding: 20px 28px;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .hero-random-wrapper .hero-content {
+    padding: 40px; /* bigger on desktop */
+  }
+}
+
+/* Mobile: stack content under the image (no overlay) */
+@media (max-width: 768px) {
+  .hero-random-wrapper .hero-overlay {
+    position: static;          /* stop overlaying */
+    inset: auto;
+    display: block;
+    padding: 0;                /* we’ll pad the content instead */
+    background-image: none;    /* optional: remove overlay gradient */
+    pointer-events: auto;
+  }
+
+  .hero-random-wrapper .hero-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 16px;
+    text-align: left;          /* or keep center if you prefer */
+    background-color: #002033 !important; /* optional */
+  }
+
+  /* Optional: let the image height be natural (if you don’t want 16:9 cropping on mobile) */
+  .hero-random-wrapper .hero-media {
+    aspect-ratio: auto;
+  }
+}
