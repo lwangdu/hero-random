@@ -65,9 +65,14 @@ $height = isset( $meta['height'] ) ? (int) $meta['height'] : null;
 // Build src/srcset/sizes using core sizes; you can swap for custom image sizes as needed.
 $src_full = wp_get_attachment_image_src( $img_id, 'full' );
 $src_large = wp_get_attachment_image_src( $img_id, 'large' );
-$src_medium_large = function_exists('image_get_intermediate_size') ? image_get_intermediate_size( $img_id, 'medium_large' ) : null;
-
 $src = $src_large ? $src_large[0] : ($src_full ? $src_full[0] : '');
+
+if ( '' === $src ) {
+    echo '<div ' . $wrapper_attrs . '>';
+    echo '<div class="hero-overlay"><div class="hero-content"><p><em>' . esc_html__( 'The selected image could not be rendered. Check the attachment image sizes.', 'hero-random' ) . '</em></p></div></div>';
+    echo '</div>';
+    return;
+}
 
 $srcset = wp_get_attachment_image_srcset( $img_id, 'full' );
 $sizes  = '(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 100vw';

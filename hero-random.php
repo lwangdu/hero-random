@@ -23,6 +23,11 @@ add_action( 'admin_notices', function () {
         return;
     }
 
+    $screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+    if ( $screen && ! in_array( $screen->base, [ 'plugins', 'post', 'page', 'site-editor' ], true ) ) {
+        return;
+    }
+
     echo '<div class="notice notice-warning"><p>';
     echo esc_html__( 'Hero Random Images requires Advanced Custom Fields Pro to be installed and active.', 'hero-random' );
     echo '</p></div>';

@@ -41,7 +41,7 @@
 }
 
 .hero-random-wrapper .hero-content {
-  max-width: 650px;;
+  max-width: 650px;
   color: var(--hero-text);
   pointer-events: auto; /* re-enable interaction */
 }
@@ -65,8 +65,6 @@
   margin: 0 0 1.25rem;
   opacity: 0.95;
   color: var(--hero-text);
-}
-.hero-random-wrapper .hero-subheading {
   font-weight: 600;
 }
 
