@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /**
- * Renders the Hero Random block.
+ * Renders the Random Hero Images block.
  * Vars: $block, $content (InnerBlocks), $is_preview
  */
 

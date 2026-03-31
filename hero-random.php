@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:     Hero Random Images
- * Description:     Display a random image from an ACF gallery as a responsive, accessible hero block.
+ * Plugin Name:     Random Hero Images
+ * Description:     Displays a random image from an ACF gallery as a responsive and accessible hero block.
  * Version:         1.2.5
  * Author:          Lobsang Wangdu
  * Text Domain:     hero-random
@@ -29,7 +29,7 @@ add_action( 'admin_notices', function () {
     }
 
     echo '<div class="notice notice-warning"><p>';
-    echo esc_html__( 'Hero Random Images requires Advanced Custom Fields Pro to be installed and active.', 'hero-random' );
+    echo esc_html__( 'Random Hero Images requires Advanced Custom Fields Pro to be installed and active.', 'hero-random' );
     echo '</p></div>';
 } );
 
@@ -46,7 +46,7 @@ add_action( 'acf/init', function () {
 
     acf_register_block_type( [
         'name'              => 'hero-random',
-        'title'             => __( 'Hero (Random ACF Image)', 'hero-random' ),
+        'title'             => __( 'Random Hero Images', 'hero-random' ),
         'description'       => __( 'Random hero image with editable title & button slots', 'hero-random' ),
         'render_template'   => $base_path . 'inc/hero-random-block.php',
         'category'          => 'media',

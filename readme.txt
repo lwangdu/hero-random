@@ -1,4 +1,4 @@
-=== Hero Random Images ===
+=== Random Hero Images ===
 Contributors: Lobsang Wangdu
 Tags: block, gutenberg, hero, image, acf
 Requires at least: 6.3
@@ -12,7 +12,7 @@ Display a random image from an ACF gallery as a responsive, accessible hero bloc
 
 == Description ==
 
-Hero Random Images adds a Gutenberg block that displays one random image from an ACF gallery field and overlays editable heading, text, and buttons.
+Random Hero Images adds a Gutenberg block that displays one random image from an ACF gallery field and overlays editable heading, text, and buttons.
 
 Features:
 
@@ -29,7 +29,7 @@ This plugin requires Advanced Custom Fields Pro because it uses ACF block regist
 2. Activate the plugin.
 3. Make sure Advanced Custom Fields Pro is installed and activated.
 4. Create or assign an ACF gallery field for the block. The plugin currently looks for `hero_random` first, then `gallery`.
-5. Add the `Hero (Random ACF Image)` block in the block editor.
+5. Add the `Random Hero Images` block in the block editor.
 
 == Frequently Asked Questions ==
 
@@ -47,7 +47,7 @@ No. This plugin does not track users, store personal data, or send data to exter
 
 == Screenshots ==
 
-1. The Hero Random block in the editor.
+1. The Random Hero Images block in the editor.
 2. The hero block rendered on the front end.
 
 == Changelog ==

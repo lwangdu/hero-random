@@ -1,6 +1,6 @@
-# Hero Random Images
+# Random Hero Images
 
-Hero Random Images is a WordPress plugin that adds a Gutenberg hero block powered by an ACF gallery field.
+Random Hero Images is a WordPress plugin that adds a Gutenberg hero block powered by an ACF gallery field.
 
 The block selects one random image from the gallery and overlays editable heading, text, and button content using InnerBlocks.
 
@@ -32,7 +32,7 @@ The block selects one random image from the gallery and overlays editable headin
 3. Make sure Advanced Custom Fields Pro is installed and active.
 4. Create or assign an ACF gallery field for the block.
 5. The plugin currently checks `hero_random` first and then `gallery`.
-6. Add the `Hero (Random ACF Image)` block in the editor.
+6. Add the `Random Hero Images` block in the editor.
 
 ## Development
 
@@ -55,11 +55,11 @@ Add screenshots to `docs/screenshots/` using these filenames:
 
 ### Editor Preview
 
-![Hero Random block editor preview](docs/screenshots/editor-preview.png)
+![Random Hero Images block editor preview](docs/screenshots/editor-preview.png)
 
 ### Front-End Preview
 
-![Hero Random block front-end preview](docs/screenshots/frontend-preview.png)
+![Random Hero Images block front-end preview](docs/screenshots/frontend-preview.png)
 
 ## Files
 
