@@ -1,5 +1,5 @@
 === Hero Random Images ===
-Contributors: lobsangwangdu
+Contributors: Lobsang Wangdu
 Tags: block, gutenberg, hero, image, acf
 Requires at least: 6.3
 Tested up to: 6.8
