@@ -46,12 +46,22 @@ The block selects one random image from the gallery and overlays editable headin
 /opt/homebrew/bin/php -l inc/hero-random-block.php
 ```
 
+## Screenshots
+
+Add screenshots to `docs/screenshots/` using these filenames:
+
+- `editor-preview.png` for the block in the editor
+- `frontend-preview.png` for the rendered hero on the front end
+
+Once those files are added, you can embed them here with standard Markdown image links.
+
 ## Files
 
 - `hero-random.php` plugin bootstrap and block registration
 - `inc/hero-random-block.php` block render template
 - `inc/hero-random.css` shared front-end and editor styling
 - `readme.txt` WordPress-style plugin readme
+- `docs/screenshots/` optional GitHub documentation images
 
 ## Notes
 
