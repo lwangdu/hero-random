@@ -53,7 +53,13 @@ Add screenshots to `docs/screenshots/` using these filenames:
 - `editor-preview.png` for the block in the editor
 - `frontend-preview.png` for the rendered hero on the front end
 
-Once those files are added, you can embed them here with standard Markdown image links.
+### Editor Preview
+
+![Hero Random block editor preview](docs/screenshots/editor-preview.png)
+
+### Front-End Preview
+
+![Hero Random block front-end preview](docs/screenshots/frontend-preview.png)
 
 ## Files
 
