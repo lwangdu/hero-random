@@ -30,6 +30,7 @@ This plugin requires Advanced Custom Fields Pro because it uses ACF block regist
 3. Make sure Advanced Custom Fields Pro is installed and activated.
 4. Create or assign an ACF gallery field for the block. The plugin currently looks for `hero_random` first, then `gallery`.
 5. Add the `Random Hero Images` block in the block editor.
+6. Choose hero images that keep strong contrast behind the text, especially on desktop layouts.
 
 == Frequently Asked Questions ==
 

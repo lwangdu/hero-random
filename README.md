@@ -33,6 +33,7 @@ The block selects one random image from the gallery and overlays editable headin
 4. Create or assign an ACF gallery field for the block.
 5. The plugin currently checks `hero_random` first and then `gallery`.
 6. Add the `Random Hero Images` block in the editor.
+7. Choose hero images that keep strong text contrast, especially for the desktop hero layout.
 
 ## Development
 
