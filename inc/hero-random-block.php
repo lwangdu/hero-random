@@ -170,7 +170,7 @@ $template = [
     </picture>
   </figure>
 
-    <div class="hero-overlay" aria-live="polite">
+    <div class="hero-overlay">
     <?php if ( $is_preview ) : ?>
       <div class="hero-content">
         <InnerBlocks

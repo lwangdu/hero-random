@@ -5,7 +5,7 @@
   overflow: hidden;
   isolation: isolate; /* ensure overlay blends properly */
   --hero-pad: clamp(1rem, 3vw, 3rem);
-  --hero-max: 72rem;
+  --hero-max: 38rem;
   --hero-text: #fff;
   --hero-shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.35);
 }
@@ -27,35 +27,44 @@
   object-position: center;
 }
 
-/* Overlay (centered) */
+/* Overlay anchored bottom-left with a stronger cinematic gradient */
 .hero-random-wrapper .hero-overlay {
   position: absolute;
   inset: 0;
   display: grid;
-  place-items: center;
+  align-items: end;
+  justify-items: start;
   padding: var(--hero-pad);
-  text-align: center;
+  padding-bottom: clamp(8rem, 14vw, 13rem);
+  text-align: left;
   z-index: 1;
   pointer-events: none; /* let inner controls opt-in */
-  background-image: linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,.25) 30%, rgba(0,0,0,.1) 60%, rgba(0,0,0,0));
+  background-image:
+    linear-gradient(180deg, rgba(6,12,23,0) 24%, rgba(6,12,23,0.34) 54%, rgba(6,12,23,0.8) 100%),
+    linear-gradient(90deg, rgba(6,12,23,0.82) 0%, rgba(6,12,23,0.6) 30%, rgba(6,12,23,0.32) 52%, rgba(6,12,23,0.08) 72%, rgba(6,12,23,0) 86%);
 }
 
 .hero-random-wrapper .hero-content {
-  max-width: 650px;
+  max-width: min(92vw, var(--hero-max));
   color: var(--hero-text);
   pointer-events: auto; /* re-enable interaction */
+  padding: clamp(1rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 1.75rem);
+  border-left: none;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 /* Typography – responsive with clamp() */
 .hero-random-wrapper .hero-content h1,
 .hero-random-wrapper .hero-content h2 {
-  font-size: clamp(1.75rem, 3.5vw + .5rem, 3rem);
+  font-size: clamp(2rem, 3.8vw + .5rem, 4rem);
   line-height: 1.1;
   margin: 0 0 .75rem;
 }
 
 .hero-random-wrapper .hero-content p {
-  font-size: clamp(1rem, 1vw + .75rem, 1.25rem);
+  font-size: clamp(1rem, 1vw + .75rem, 1.2rem);
   margin: 0 0 1rem;
 }
 
@@ -68,9 +77,19 @@
   font-weight: 600;
 }
 
+.hero-random-wrapper .hero-content .wp-block-buttons {
+  justify-content: flex-start;
+}
+
+.hero-random-wrapper .hero-content .wp-block-button__link {
+  border-radius: 0;
+  padding: .75rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 /* Mobile first */
 .hero-random-wrapper .hero-content {
-  background-color: rgba(0, 0, 0, 0.5) !important;
   padding: 12px; /* smaller on mobile */
 }
 
@@ -103,8 +122,13 @@
     max-width: 100%;
     margin: 0;
     padding: 16px;
-    text-align: left;          /* or keep center if you prefer */
-    background-color: #002033 !important; /* optional */
+    text-align: left;
+    border-left: none;
+    background: none;
+    background-color: #002033 !important;
+    backdrop-filter: none;
+    box-shadow: none;
+    transform: none;
   }
 
   /* Optional: let the image height be natural (if you don’t want 16:9 cropping on mobile) */
