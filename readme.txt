@@ -4,7 +4,7 @@ Tags: block, gutenberg, hero, image, acf
 Requires at least: 6.3
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,12 @@ No. This plugin does not track users, store personal data, or send data to exter
 2. The hero block rendered on the front end.
 
 == Changelog ==
+
+= 1.2.6 =
+
+* Refined desktop hero styling while keeping the mobile layout unchanged.
+* Improved hero accessibility by removing unnecessary live-region markup.
+* Tuned overlay contrast and button typography for better readability.
 
 = 1.2.5 =
 

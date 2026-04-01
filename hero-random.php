@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Random Hero Images
  * Description:     Displays a random image from an ACF gallery as a responsive and accessible hero block.
- * Version:         1.2.5
+ * Version:         1.2.6
  * Author:          Lobsang Wangdu
  * Text Domain:     hero-random
  * Requires at least: 6.3

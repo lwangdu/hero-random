@@ -6,7 +6,7 @@ The block selects one random image from the gallery and overlays editable headin
 
 ## Status
 
-- Current version: `1.2.5`
+- Current version: `1.2.6`
 - Distribution: GitHub
 - Dependency: Advanced Custom Fields Pro
 - PHP linting: passed on `hero-random.php` and `inc/hero-random-block.php`
@@ -75,6 +75,12 @@ Add screenshots to `docs/screenshots/` using these filenames:
 - The block depends on ACF block registration and ACF gallery field data.
 
 ## Changelog
+
+### 1.2.6
+
+- Refined desktop hero styling while keeping the mobile layout unchanged
+- Improved hero accessibility by removing unnecessary live-region markup
+- Tuned overlay contrast and button typography for better readability
 
 ### 1.2.5
 
