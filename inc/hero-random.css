@@ -88,6 +88,12 @@
   letter-spacing: 0.03em;
 }
 
+.hero-random-wrapper .hero-content :is(a, button, .wp-block-button__link):focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(6, 12, 23, 0.45);
+}
+
 /* Mobile first */
 .hero-random-wrapper .hero-content {
   padding: 12px; /* smaller on mobile */
