@@ -27,15 +27,14 @@
   object-position: center;
 }
 
-/* Overlay anchored bottom-left with a stronger cinematic gradient */
+/* Overlay anchored middle-left with a stronger cinematic gradient */
 .hero-random-wrapper .hero-overlay {
   position: absolute;
   inset: 0;
   display: grid;
-  align-items: end;
+  align-items: center;
   justify-items: start;
   padding: var(--hero-pad);
-  padding-bottom: clamp(8rem, 14vw, 13rem);
   text-align: left;
   z-index: 1;
   pointer-events: none; /* let inner controls opt-in */
