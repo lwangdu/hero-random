@@ -4,7 +4,7 @@ Tags: block, gutenberg, hero, image, acf
 Requires at least: 6.3
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,13 @@ No. This plugin does not track users, store personal data, or send data to exter
 2. The hero block rendered on the front end.
 
 == Changelog ==
+
+= 1.2.7 =
+
+* Kept gallery fallback messages in the editor only so they do not appear on the front end.
+* Prevented duplicate section IDs when a custom block anchor is set.
+* Removed inherited underlines from hero button links.
+* Improved WordPress coding standards alignment for PHP and CSS.
 
 = 1.2.6 =
 
