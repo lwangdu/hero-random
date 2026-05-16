@@ -137,7 +137,7 @@
 	.hero-random-wrapper .hero-content {
 		max-width: 100%;
 		margin: 0;
-		padding: 16px 16px 28px;
+		padding: 12px 12px 18px;
 		border-left: none;
 		background: none;
 		background-color: #002033 !important;
@@ -149,5 +149,9 @@
 
 	.hero-random-wrapper .hero-media {
 		aspect-ratio: auto;
+	}
+
+	.hero-random-wrapper .hero-content .wp-block-button__link {
+		padding: 0.65rem 0.85rem;
 	}
 }
